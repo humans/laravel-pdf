@@ -22,6 +22,8 @@ class Manager
                 return new LogDriver;
             case 'snappy':
                 return new SnappyDriver;
+            case 'compose':
+                return new ComposeDriver;
         }
     }
 
@@ -32,7 +34,7 @@ class Manager
 
     public function getDefaultDriver()
     {
-        return Config::get('pdf.driver');
+        return Config::get('pdf.default');
     }
 
     public function __call($method, array $parameters = [])
