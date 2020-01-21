@@ -1,0 +1,26 @@
+{
+    "name": "artisan/laravel-pdf",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jaggy Gauran",
+            "email": "jaggy@artisan.studio"
+        }
+    ],
+    "require": {
+        "illuminate/support": "5.7|5.8|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Artisan\\Pdf\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Artisan\\Pdf\\PdfServiceProvider"
+            ]
+        }
+    }
+}
