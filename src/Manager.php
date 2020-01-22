@@ -34,7 +34,7 @@ class Manager
 
     public function getDefaultDriver()
     {
-        return Config::get('pdf.default');
+        return Config::get('laravel-pdf.default');
     }
 
     public function __call($method, array $parameters = [])
