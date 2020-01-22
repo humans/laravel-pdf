@@ -20,7 +20,7 @@ class PdfServiceProvider extends \Illuminate\Support\ServiceProvider
         $configPath = __DIR__ . '/../config/laravel-pdf.php';
 
         $this->publishes([
-            $configPath => App::configPath('semaphore.php')
+            $configPath => App::configPath('laravel-pdf.php')
         ], 'laravel-pdf-config');
     }
 }

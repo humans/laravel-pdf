@@ -29,9 +29,9 @@ class ComposeDriver implements DriverInterface
     public function stream()
     {
         $client = HttpClient::create([
-            'base_uri' => Config::get('pdf.drivers.compose.url'),
+            'base_uri' => Config::get('laravel-pdf.drivers.compose.url'),
             'headers' => [
-                'X-Compose-Project-Token' => Config::get('pdf.drivers.compose.token'),
+                'X-Compose-Project-Token' => Config::get('laravel-pdf.drivers.compose.token'),
             ],
         ]);
 
