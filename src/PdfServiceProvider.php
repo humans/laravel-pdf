@@ -8,7 +8,7 @@ class PdfServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/pdf.php', 'laravel-pdf');
+        $this->mergeConfigFrom(__DIR__ . '/../config/laravel-pdf.php', 'laravel-pdf');
 
         $this->app->bind(Pdf::class, function () {
             return new Manager;
@@ -17,7 +17,7 @@ class PdfServiceProvider extends \Illuminate\Support\ServiceProvider
 
     public function boot()
     {
-        $configPath = __DIR__ . '/../config/semaphore.php';
+        $configPath = __DIR__ . '/../config/laravel-pdf.php';
 
         $this->publishes([
             $configPath => App::configPath('semaphore.php')
