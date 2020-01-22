@@ -9,15 +9,16 @@
         }
     ],
     "require": {
-        "illuminate/support": "5.7|5.8|^6.0",
-        "barryvdh/laravel-snappy": "^0.4.6",
-        "guzzlehttp/guzzle": "~6.0",
-        "symfony/http-client": "^5.0"
+        "illuminate/support": "5.7|5.8|^6.0"
     },
     "autoload": {
         "psr-4": {
             "Artisan\\Pdf\\": "src"
         }
+    },
+    "suggest": {
+        "barryvdh/laravel-snappy": "Required to use the Snappy driver (^0.4.0).",
+        "symfony/http-client": "Required to use the Compose PDF driver (^5.0)."
     },
     "extra": {
         "laravel": {
