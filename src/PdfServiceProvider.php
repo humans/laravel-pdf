@@ -2,11 +2,13 @@
 
 namespace Artisan\Pdf;
 
+use Illuminate\Support\Facades\App;
+
 class PdfServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/pdf.php', 'pdf');
+        $this->mergeConfigFrom(__DIR__ . '/../config/pdf.php', 'laravel-pdf');
 
         $this->app->bind(Pdf::class, function () {
             return new Manager;
@@ -15,5 +17,10 @@ class PdfServiceProvider extends \Illuminate\Support\ServiceProvider
 
     public function boot()
     {
+        $configPath = __DIR__ . '/../config/semaphore.php';
+
+        $this->publishes([
+            $configPath => App::configPath('semaphore.php')
+        ], 'laravel-pdf-config');
     }
 }
