@@ -35,7 +35,7 @@ class ComposeDriver implements DriverInterface
             ],
         ]);
 
-        $response = $client->request('GET', "/layouts/{$this->layout}", [
+        $response = $client->request('GET', "/api/v1/layouts/{$this->layout}", [
             'query' => $this->data,
         ]);
 
